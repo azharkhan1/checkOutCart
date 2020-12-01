@@ -85,6 +85,7 @@ input{
         var shirtQuantity  = parseInt(document.getElementById("shirtQuantity").value);
         shirtSum = shirt*shirtQuantity;
         shirtTotal.innerHTML = shirtSum;
+        document.getElementById("shirtQuantity").readonly    = true;
         }
         function addPant(){
         var pantTotal = document.getElementById("pantTotal");
@@ -101,8 +102,7 @@ input{
         glassTotal.innerHTML = glassSum;
         }
         function checkout(){
-
-            var sum = parseInt(glassTotal.innerText) + parseInt(pantTotal.innerText) + parseInt(shirtTotal.innerText) ;
+     sum = parseInt(glassTotal.innerHTML) + parseInt (pantTotal.innerHTML) + parseInt(shirtTotal.innerHTML)
      document.getElementById("checkout").innerHTML= sum;
                 }
         
